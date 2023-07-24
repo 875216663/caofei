@@ -1,0 +1,23 @@
+@import "../scss/mixins";
+
+.nav-bar{
+    height: 70px;
+    text-align: center;
+    font-size: 32px;
+    background-color: #5192ce;
+    color: #c0c0c1;
+    width: 100%;
+    margin: 0px;
+}
+
+.left {
+    @include size(6%,90%);
+    @include flex(center);
+ 
+     background-color: #e2f2da;
+     font-size: 77px;
+     font-weight: bold;
+     &:hover {
+         cursor: pointer;
+     }
+ }

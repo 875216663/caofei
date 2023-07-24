@@ -1,0 +1,54 @@
+@import "../scss/mixins";
+
+.reminders {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    // set the reminder gap space with each other. 
+    gap: 65px;
+    >.reminder {
+        @include size(252px,fit-content);
+        background-color: antiquewhite;
+        border-radius: 15px;
+        box-shadow: 0px 10px 1em 0px #b1aeae;
+        margin-bottom: 10px;
+        //set the <p> font-size and css in different postions.
+        p {
+            margin-left: 20px;
+            &:nth-child(1) {
+                font-size: 24px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            &:nth-child(2) {
+                font-size: 16px;
+                word-wrap: break-word;
+                height: 29%;
+                margin-bottom: 16px;
+               // display: none; //should be none at frist.
+            }
+            &:nth-child(3) {
+                font-size: 20px;
+            }
+        }
+        input {
+            margin-left: 20px;
+        }
+        span {
+            position: relative;
+            top: -2px;
+            color: #323030;
+        }
+        button {
+            @include  colors(#f75353e3,white);
+            @include position(relative,-2px,auto,auto,17%);
+            font-size: 15px;
+            border: 0px;
+            border-radius: 5px;
+            width: 65px;
+            cursor: pointer;
+        }
+    }
+}
+

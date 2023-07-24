@@ -1,0 +1,41 @@
+//mixin functions, simply embed them into scss file make the scss more clear and tidy. 
+@mixin border-radius($thickness, $radius,$border-color:white,$border-type:solid) { //minxi是返回样式
+    border:$thickness $border-type $border-color;
+    border-radius: $radius;
+}
+//easy set the size and color of element
+@mixin size($width:auto,$height:auto){
+    width:$width;
+    height:$height;
+}
+@mixin colors($background-color,$color) {
+    background-color:$background-color;
+    color:$color;
+}
+// the button box setting
+@mixin button($background-color,$border, $font-size, $color,$border-radius,$width:auto,$height:auto) {
+    @include size($width,$height);
+    @include border-radius($border,$border-radius);
+    @include colors($background-color,$color);
+    font-size: $font-size;
+
+    &:hover {
+        cursor:pointer
+     }
+}
+// the flex layout setting
+@mixin flex($justify-content:unset,$align-items:unset,$flex-direction:row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+//positon easy setting.
+@mixin position($position,$top:auto,$bottom:auto,$right:auto,$left:auto){
+    position: $position;
+    top:$top;
+    bottom:$bottom;
+    right:$right;
+    left:$left;
+}
+

@@ -1,0 +1,27 @@
+// set the color variables 
+$title-blue:rgba(34, 137, 255, 1);
+$title-gary:rgba(127, 127, 127, 1); 
+$deep-blue:rgba(20, 57, 91, 1);
+$board-blue:rgb(24, 106, 165);
+$input_blue:rgba(73, 138, 184, 1);
+$background-white:rgb(244 247 250);
+
+//set the div upper attribute so could extend them later.
+.imgs_div {
+        box-shadow: 0 0 2em #eff8ff;
+        width: 22%;
+        border-radius: 39px;
+        color: #a5abae;
+        font-size: 23px;
+}
+
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
